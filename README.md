@@ -6,10 +6,6 @@
 
 <br>
 
-<p align='center'>
-  <a href="https://angularboilerplate.vercel.app/">Live site (Demo)</a>
-</p>
-
 <br>
 
 <br>
