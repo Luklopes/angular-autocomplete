@@ -1,0 +1,17 @@
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+<div class="autocomplete-container">
+  <div class="tags-container">
+    <div class="tag" *ngFor="let tag of selectedTags" (click)="handleTagClick(tag)">{{ tag }}</div>
+  </div>
+  <input
+    type="text"
+    [value]="inputValue"
+    (input)="handleInputChange($event.target.value)"
+    (keydown)="handleKeyDown($event)"
+    placeholder="Digite para adicionar tags"
+  />
+  <ul *ngIf="suggestions.length > 0" class="suggestions-list">
+    <li *ngFor="let suggestion of suggestions" (click)="handleSuggestionClick(suggestion)">{{ suggestion }}</li>
+  </ul>
+</div>
